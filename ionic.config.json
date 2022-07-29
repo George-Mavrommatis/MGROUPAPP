@@ -1,0 +1,7 @@
+{
+  "name": "MGroupApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
