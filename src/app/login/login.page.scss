@@ -1,0 +1,17 @@
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #000000;
+
+  margin: 0;
+}
+
+ion-content {
+  --padding-start: 2rem;
+  --padding-end: 2rem;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(124,181,179,1) 35%, rgba(0,212,255,1) 100%);
+
+
+}
