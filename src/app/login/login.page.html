@@ -1,0 +1,42 @@
+
+
+<ion-header [translucent]="true" >
+  <ion-toolbar  class="ion-padding" color="dark">
+      <ion-button   color="dark">
+        <ion-icon  size="large" name="menu-outline"></ion-icon>
+      </ion-button>
+    <ion-title class="ion-text-center" size="large">MGroup Guest Experience Application</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div id="container" class="ion-padding">
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" class="ion-text-center" formControlName="email"></ion-input>
+      <ion-input slot="error" *ngif="(email.dirty || email.touched) && email.errors"> Email is invalid</ion-input>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Password" class="ion-text-center" formControlName="password"></ion-input>
+      <ion-input slot="error" *ngif="(password.dirty || password.touched) && password.errors"> Password needs to be at least 6 characters</ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!credentials.valid"> Login </ion-button>
+    <ion-button expand="block" type="button" (click)="register()"> Register </ion-button>
+  </form>
+
+  <p> </p>
+  <p class="ion-text-center"> Or </p>
+  <p class="ion-text-center"> SignUp / Login  With </p>
+</div>
+
+<div id="container" class="ion-text-center">
+  <ion-button slot="start" type="button" (click)="register()"> Google </ion-button>
+  <ion-button slot="center" type="button" (click)="register()"> Facebook </ion-button>
+  <ion-button slot="end" type="button" (click)="register()"> Twitter </ion-button>
+</div>
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gea-mgroup": {
+      "hosting": {
+        "app": [
+          "gea-mgroup"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gea-mgroup"
+  }
+}

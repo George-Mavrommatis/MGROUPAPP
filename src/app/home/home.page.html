@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" >
+
+    <ion-toolbar  class="ion-padding" color="dark">
+      <ion-button  (click)="logout()" color="dark"> <h1> Menu </h1>
+        <ion-icon  slot="start" size="large" name="log-out-outline"></ion-icon>
+      </ion-button>
+    <ion-title class="ion-text-center" size="large">Guest Profile</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+  <!------ Header -->
+
+      <div class="avatar"></div>
+      <ion-img src= 'assets/imgs/Logo.png'></ion-img>
+
+    <!------ SearchBar -->
+
+      <!------ Grid -->
+
+        <!------ Cards -->
+  <ion-grid>
+    <ion-row>
+      <ion-item class="ion-padding" >
+        <div class="categories">
+          <app-category-item *ngFor='let item of categories' [item]="item"> </app-category-item>
+
+        </div>
+      </ion-item>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+        <p> This is the second Row</p>
+
+
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
