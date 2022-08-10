@@ -1,10 +1,17 @@
 <ion-header [translucent]="true" >
 
     <ion-toolbar  class="ion-padding" color="dark">
-      <ion-button  (click)="logout()" color="dark">
-        <ion-icon  slot="start" size="large" name="log-out-outline"></ion-icon>
+
+      <ion-buttons  size="large" (click)="logout()" color="dark">
+        <ion-button size="large"> <ion-icon    name="log-out-outline"></ion-icon>  </ion-button>
+        <ion-button size="large">  <ion-avatar style="width :180% ; height : 180%"   >
+          <img src="assets/imgs/Logo.png">
+        </ion-avatar>
       </ion-button>
-    <ion-title class="ion-text-center" size="large">Guest Profile</ion-title>
+      <ion-button disabled="buttonDisabled" > <ion-title  class="ion-text-center" size="normal">Home</ion-title> </ion-button>
+
+      </ion-buttons>
+
   </ion-toolbar>
 
 
@@ -26,29 +33,34 @@
         <!------ Cards -->
   <ion-grid>
     <ion-row>
-      <ion-item class="ion-padding" >
+      <ion-item class="ion-align-items-center" class="ion-padding" >
         <div class="categories">
           <app-category-item *ngFor='let item of categories' [item]="item"> </app-category-item>
 
         </div>
       </ion-item>
-      <ion-col>
 
+    </ion-row>
+    <ion-row class="bottom-bar">
+      <ion-col>
+        <ion-button fill="clear" size="small" color="danger" class="border-right">
+          <ion-icon slot="start" name="thumbs-up"></ion-icon>
+          <small>12</small>
+        </ion-button>
       </ion-col>
       <ion-col>
-
+        <ion-button fill="clear" size="small" color="danger" class="border-right">
+          <ion-icon slot="start" name="text"></ion-icon>
+          <small>12 Comments</small>
+        </ion-button>
       </ion-col>
       <ion-col>
-
+        <ion-button fill="clear" size="small" color="danger">
+            <small>12 minutes ago</small>
+        </ion-button>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-
-        <p> This is the second Row</p>
-
-
-    </ion-row>
   </ion-grid>
 
 

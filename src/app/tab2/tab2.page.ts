@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, NgModule, OnInit, TemplateRef, ViewChildren } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController, LoadingController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
+import { AvatarService } from '../services/avatar.service';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { Category } from '../models/category.model';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +14,18 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(
+    private avatarService: AvatarService,
+    private authService: AuthService,
+    private router: Router,
+    private loadingController: LoadingController,
+    private alertController: AlertController) {}
+
+
+
+  async logout() {
+    await  this.authService.logout();
+    this.router.navigateByUrl('/',{replaceUrl: true});
+   }
 
 }

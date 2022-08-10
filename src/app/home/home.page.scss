@@ -33,7 +33,7 @@ ion-content {
   --padding-end: 2rem;
   background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(124,181,179,1) 35%, rgba(0,212,255,1) 100%);
-}
+
 
 .header {
   display: flex;
@@ -41,7 +41,7 @@ ion-content {
   align-items: center;
   margin-bottom:  1rem;
   margin-top: 3rem;
-}
+
 
 h1{
   font-size: 3rem;
@@ -50,18 +50,21 @@ h1{
   margin: 0;
 }
 
-.avatar {
-  width: 35px;
-  height: 35px;
-  background-color: rgba(254, 254, 254, 0.021);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow:hidden;
-}
+  .avatar {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(254, 254, 254, 0.021);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow:hidden;
 
-ion-img {
-  width: 90%;
-  height: 90%;
+
+    ion-img {
+      width: 90%;
+      height: 90%;
+      }
+    }
+  }
 }
