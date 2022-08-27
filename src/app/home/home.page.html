@@ -1,16 +1,21 @@
 <ion-header [translucent]="true" >
 
-    <ion-toolbar  class="ion-padding" color="dark">
+  <ion-toolbar class="ion-padding" color="light">
 
-      <ion-buttons  size="large" (click)="logout()" color="dark">
-        <ion-button size="large"> <ion-icon    name="log-out-outline"></ion-icon>  </ion-button>
-        <ion-button size="large">  <ion-avatar style="width :180% ; height : 180%"   >
-          <img src="assets/imgs/Logo.png">
-        </ion-avatar>
-      </ion-button>
-      <ion-button disabled="buttonDisabled" > <ion-title  class="ion-text-center" size="normal">Home</ion-title> </ion-button>
 
-      </ion-buttons>
+      <ion-avatar slot="start" style="width:120% !important;
+        height : 120% !important;
+        max-width: 200px !important;
+        max-height: 200px !important;">
+        <img src="assets/imgs/LogoBlackStrokes.png">
+      </ion-avatar>
+
+
+    <ion-buttons slot="end" size="large" color="dark">
+
+      <ion-title style="font-weight: 700;" class="ion-align-items-center"> Home </ion-title>
+
+    </ion-buttons>
 
   </ion-toolbar>
 
@@ -24,21 +29,26 @@
   <!------ Header -->
 
       <div class="avatar"></div>
-      <ion-img src= 'assets/imgs/Logo.png'></ion-img>
+      <ion-img src= 'assets/imgs/LogoBlackStrokes.png'></ion-img>
 
     <!------ SearchBar -->
 
       <!------ Grid -->
 
         <!------ Cards -->
+
+
+        <ion-item>
+          <div class="categories">
+            <app-category-item *ngFor='let item of categories' [item]="item"> </app-category-item>
+
+          </div>
+        </ion-item>
+
+
   <ion-grid>
     <ion-row>
-      <ion-item class="ion-align-items-center" class="ion-padding" >
-        <div class="categories">
-          <app-category-item *ngFor='let item of categories' [item]="item"> </app-category-item>
 
-        </div>
-      </ion-item>
 
     </ion-row>
     <ion-row class="bottom-bar">

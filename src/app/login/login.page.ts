@@ -63,6 +63,11 @@ export class LoginPage implements OnInit {
       this.showAlert('Login failed', ' Please try again.');
     }
   }
+  async logout() {
+    await  this.authService.logout();
+    this.router.navigateByUrl('/',{replaceUrl: true});
+   }
+
   async showAlert(header, message){
     const alert = await this.alertController.create({
       header,

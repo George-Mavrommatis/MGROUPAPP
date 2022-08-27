@@ -1,17 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header [translucent]="true" >
+
+  <ion-toolbar class="ion-padding" color="light">
+
+    <ion-avatar slot="start" style="width:120% !important;
+        height : 120% !important;
+        max-width: 200px !important;
+        max-height: 200px !important;">
+        <img src="assets/imgs/LogoBlackStrokes.png">
+      </ion-avatar>
+
+    <ion-buttons slot="end" size="large" color="dark">
+
+      <ion-title style="font-weight: 500;" class="ion-align-items-center"> Profile </ion-title>
+
+      <ion-button (click)="logout()" style="width:100% !important;
+      height : 100% !important;
+      max-width: 100px !important;
+      max-height: 100px !important;
+      padding-top: 1%;" size="large">
+        <ion-avatar style="width:90% !important;
+        height : 90% !important;
+        max-width: 50px !important;
+        max-height: 50px !important;
+        padding-top: 1%;">
+          <img src="assets/imgs/logout.png">
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+
+
 </ion-content>

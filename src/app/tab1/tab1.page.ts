@@ -36,6 +36,10 @@
    this.router.navigateByUrl('/',{replaceUrl: true});
   }
 
+  async goHome() {
+    this.router.navigateByUrl('/tabs/home',{replaceUrl: true});
+   }
+
   async changeImage() {
 
   }

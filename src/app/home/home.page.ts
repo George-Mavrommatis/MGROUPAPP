@@ -37,6 +37,10 @@ async logout() {
  await  this.authService.logout();
  this.router.navigateByUrl('/',{replaceUrl: true});
 }
+async goHome() {
+
+  this.router.navigateByUrl('/tabs/home',{replaceUrl: true});
+ }
 
 async changeImage() {
 
@@ -47,7 +51,7 @@ getCategories() {
   {
     id: 1,
     label: 'Crete',
-    image: 'assets/imgs/Logo.png',
+    image: 'assets/imgs/Crete.jpg',
     active: true
   },
   {

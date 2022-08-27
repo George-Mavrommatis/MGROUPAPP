@@ -4,7 +4,7 @@
 
   color: #000000;
 
-  margin: 0;
+  margin: auto;
 }
 
 ion-content {
@@ -14,4 +14,18 @@ ion-content {
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(124,181,179,1) 35%, rgba(0,212,255,1) 100%);
 
 
+.avatar{
+      size: auto;
+      width:80% !important;
+      height : 80% !important;
+      max-width: 590px !important;
+      max-height: 590px !important;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow:hidden;
+      margin: auto;
+      padding-right: 4%;
+}
 }

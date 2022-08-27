@@ -1,17 +1,35 @@
 
 
 <ion-header [translucent]="true" >
-  <ion-toolbar  class="ion-padding" color="dark">
-      <ion-button   color="dark">
-        <ion-icon  size="large" name="menu-outline"></ion-icon>
-      </ion-button>
-    <ion-title class="ion-text-center" size="large">MGroup GEA</ion-title>
+  <ion-toolbar class="ion-padding" color="light">
+
+    <ion-buttons size="large" (click)="logout()" color="dark">
+      <ion-avatar slot="start" style="width:120% !important;
+      height : 120% !important;
+      max-width: 200px !important;
+      max-height: 200px !important;">
+      <img src="assets/imgs/LogoBlackStrokes.png">
+    </ion-avatar>
+    </ion-buttons>
+
+    <ion-title slot="end" class="ion-align-items-center"> Profile </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content id="p" class="ion-padding">
 
+
   <div id="container" class="ion-padding">
+
+    <ion-avatar class="avatar" style="width:20% !important;
+      height : 20% !important;
+      max-width: 200px !important;
+      max-height: 200px !important;
+      align-items: center;
+      position: relative;">
+      <img src="assets/imgs/LogoBlackStrokes.png">
+    </ion-avatar>
+
   <form [formGroup]="credentials" (ngSubmit)="login()">
 
     <ion-item fill="solid" class="ion-margin-bottom">

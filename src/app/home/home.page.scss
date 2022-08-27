@@ -51,14 +51,18 @@ h1{
 }
 
   .avatar {
-    width: 35px;
-    height: 35px;
-    background-color: rgba(254, 254, 254, 0.021);
-    border-radius: 50%;
+     size: auto;
+    width: 10% !important;
+    height : 10% !important;
+    max-width: 90px !important;
+    max-height: 90px !important;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     overflow:hidden;
+    margin: auto;
+    padding-right: 4%;
 
 
     ion-img {
@@ -66,5 +70,11 @@ h1{
       height: 90%;
       }
     }
+  }
+
+  .categories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5%;
   }
 }
